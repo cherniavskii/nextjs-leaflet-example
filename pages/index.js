@@ -9,6 +9,7 @@ import Dialog, {
 } from 'material-ui/Dialog';
 import Typography from 'material-ui/Typography';
 import { withStyles } from 'material-ui/styles';
+import Link from '../src/components/link';
 import withRoot from '../src/withRoot';
 
 const styles = theme => ({
@@ -61,6 +62,9 @@ class Index extends React.Component {
         <Button raised color="accent" onClick={this.handleClick}>
           Super Secret Password
         </Button>
+        <Link href="/map">
+          Map page
+        </Link>
       </div>
     );
   }
