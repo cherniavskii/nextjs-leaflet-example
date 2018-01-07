@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/cherniavskii/nextjs-leaflet-example/issues"
   },
-  "homepage": "https://github.com/cherniavskii/nextjs-leaflet-example#readme"
+  "homepage": "https://github.com/cherniavskii/nextjs-leaflet-example#readme",
+  "dependencies": {
+    "material-ui": "^1.0.0-beta.27",
+    "next": "^4.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
 }
