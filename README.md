@@ -1,1 +1,1 @@
-nextjs-leaflet-example
+Trying to use Next.js with Leaflet
