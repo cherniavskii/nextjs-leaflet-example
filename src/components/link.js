@@ -18,7 +18,7 @@ Link.propTypes = {
 
 Link.defaultProps = {
   raised: true,
-  color: 'accent',
+  color: 'secondary',
   component: 'a',
 };
 
