@@ -1,9 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MuiThemeProvider } from 'material-ui/styles';
+import { MuiThemeProvider, withStyles } from 'material-ui/styles';
 import Reboot from 'material-ui/Reboot';
 import lStyles from 'leaflet/dist/leaflet.css';
 import getPageContext from './getPageContext';
+
+const styles = {
+  absolute: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: 1200,
+  },
+};
 
 function withRoot(Component) {
   class WithRoot extends React.Component {
@@ -22,6 +31,7 @@ function withRoot(Component) {
     pageContext = null;
 
     render() {
+      const { classes, ...props } = this.props;
       // MuiThemeProvider makes the theme available down the React tree thanks to React context.
       return (
         <MuiThemeProvider
@@ -31,7 +41,9 @@ function withRoot(Component) {
           {/* Reboot kickstart an elegant, consistent, and simple baseline to build upon. */}
           <Reboot />
           <style jsx global>{lStyles}</style>
-          <Component {...this.props} />
+          <div className={classes.absolute}>
+            <Component {...props} />
+          </div>
         </MuiThemeProvider>
       );
     }
@@ -39,6 +51,7 @@ function withRoot(Component) {
 
   WithRoot.propTypes = {
     pageContext: PropTypes.object,
+    classes: PropTypes.object,
   };
 
   WithRoot.getInitialProps = ctx => {
@@ -49,7 +62,7 @@ function withRoot(Component) {
     return {};
   };
 
-  return WithRoot;
+  return withStyles(styles)(WithRoot);
 }
 
 export default withRoot;

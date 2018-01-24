@@ -8,8 +8,8 @@ import getMap from '../src/getMap';
 
 const styles = theme => ({
   root: {
-    textAlign: 'center',
-    paddingTop: theme.spacing.unit * 20,
+    width: '100%',
+    height: '100%',
   },
 });
 
@@ -20,10 +20,8 @@ class Index extends React.Component {
   }
   render() {
     const { classes } = this.props;
-    //
-
     return (
-      <div>
+      <div className={classes.root}>
         <Typography type="headline">Index page</Typography>
         <Link href="/map">
             Map page

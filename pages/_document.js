@@ -8,7 +8,7 @@ class MyDocument extends Document {
     const { pageContext } = this.props;
 
     return (
-      <html lang="en" dir="ltr">
+      <html lang="en" dir="ltr" style={{ height: '100%' }}>
       <Head>
         <title>My page</title>
         <meta charSet="utf-8" />
@@ -27,8 +27,8 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
         />
       </Head>
-      <body>
-      <div id="map" style={{ width: '100%', height: '500px' }} />
+      <body style={{ height: '100%' }}>
+      <div id="map" style={{ width: '100%', height: '100%' }} />
       <Main />
       <NextScript />
       </body>
