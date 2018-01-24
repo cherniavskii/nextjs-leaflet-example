@@ -2,7 +2,6 @@ import React from 'react';
 import Typography from 'material-ui/Typography';
 import withRoot from '../src/withRoot';
 import Link from '../src/components/link';
-import lStyles from 'leaflet/dist/leaflet.css';
 
 class MapPage extends React.Component {
   componentDidMount() {
@@ -16,7 +15,6 @@ class MapPage extends React.Component {
   render() {
     return (
       <div>
-        <style jsx global>{lStyles}</style>
         <div id="map" style={{ width: '100%', height: '500px' }} />
         <Typography>Map page</Typography>
         <Link href="/">

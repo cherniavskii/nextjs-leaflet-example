@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { MuiThemeProvider } from 'material-ui/styles';
 import Reboot from 'material-ui/Reboot';
+import lStyles from 'leaflet/dist/leaflet.css';
 import getPageContext from './getPageContext';
 
 function withRoot(Component) {
@@ -29,6 +30,7 @@ function withRoot(Component) {
         >
           {/* Reboot kickstart an elegant, consistent, and simple baseline to build upon. */}
           <Reboot />
+          <style jsx global>{lStyles}</style>
           <Component {...this.props} />
         </MuiThemeProvider>
       );
