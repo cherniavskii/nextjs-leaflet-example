@@ -28,6 +28,7 @@ class MyDocument extends Document {
         />
       </Head>
       <body>
+      <div id="map" style={{ width: '100%', height: '500px' }} />
       <Main />
       <NextScript />
       </body>

@@ -15,7 +15,6 @@ class MapPage extends React.Component {
   render() {
     return (
       <div>
-        <div id="map" style={{ width: '100%', height: '500px' }} />
         <Typography>Map page</Typography>
         <Link href="/">
           Index page
