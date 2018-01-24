@@ -4,6 +4,7 @@ import Typography from 'material-ui/Typography';
 import { withStyles } from 'material-ui/styles';
 import Link from '../src/components/link';
 import withRoot from '../src/withRoot';
+import getMap from '../src/getMap';
 
 const styles = theme => ({
   root: {
@@ -13,20 +14,19 @@ const styles = theme => ({
 });
 
 class Index extends React.Component {
+  componentDidMount() {
+    const map = getMap();
+    map.flyTo([12, 23], 4);
+  }
   render() {
     const { classes } = this.props;
     //
 
     return (
-      <div className={classes.root}>
-        <Typography type="display1" gutterBottom>
-          Material-UI
-        </Typography>
-        <Typography type="subheading" gutterBottom>
-          example project
-        </Typography>
+      <div>
+        <Typography type="headline">Index page</Typography>
         <Link href="/map">
-          Map page
+            Map page
         </Link>
       </div>
     );
